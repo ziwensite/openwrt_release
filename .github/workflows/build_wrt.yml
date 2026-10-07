@@ -86,7 +86,7 @@ jobs:
           echo "REMOVE_CONFIG_FRAGMENTS_KEY=$(sanitize_cache_key_part "$RAW_REMOVE_CONFIG_FRAGMENTS")" >> $GITHUB_ENV
 
       - name: Pre Clone
-        run: ./wrt_core/pre_clone_action.sh ${{ inputs.model }}
+        run: bash ./wrt_core/pre_clone_action.sh ${{ inputs.model }}
 
       - name: Cache Dependencies
         uses: actions/cache@v6.1.0
